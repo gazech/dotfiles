@@ -1,0 +1,7 @@
+[alias]
+    lol = log --oneline --graph --decorate
+[init]
+	defaultBranch = main
+[user]
+	email = gazecki.hunt@gmail.com
+	name = gazech
