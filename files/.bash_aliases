@@ -1,0 +1,16 @@
+# Listing shortcuts
+alias ll='ls -lha';
+alias la='ls -A'
+alias l='ls -CF'
+
+# Makes file commands verbose.
+alias cp='cp -v'
+alias mv='mv -v'
+
+# Displays drives and space in human readable format.
+alias df='df -h'
+
+# Colorizes the `grep` output.
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'

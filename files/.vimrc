@@ -13,9 +13,7 @@ set expandtab "spaces, not tabs
 set autoindent
 set smartindent
 
-
-set textwidth=80
-set colorcolumn =+1
+set colorcolumn=120
 
 set splitbelow
 set splitright
