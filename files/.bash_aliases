@@ -1,3 +1,7 @@
+# directory changing
+cd() { command cd "$@" && echo -e "\033[2m${OLDPWD}\033[0m -> ${PWD}"; }
+alias wk='cd ${HOME}/workspace/code"
+
 # Listing shortcuts
 alias ll='ls -lha';
 alias la='ls -A'
