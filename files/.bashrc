@@ -124,3 +124,6 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+
+# uv
+export PATH="/home/hnut/.local/bin:$PATH"
