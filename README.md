@@ -1,5 +1,11 @@
 # objectively best dotfiles
 
+
+## Set Environment
+```bash
+. ./dfinit.sh # required for every new shell!
+```
+
 ## Installation
 ```bash
 . ./make_symlinks.sh
