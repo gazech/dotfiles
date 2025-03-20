@@ -56,8 +56,16 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Git branch display
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+# only display up to 3 parents directories
+export PROMPT_DIRTRIM=2
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[2m$(__git_ps1)\033[0m $ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -115,15 +123,15 @@ fi
 # !! Contents within this block are managed by juliaup !!
 
 case ":$PATH:" in
-    *:/home/hnut/.juliaup/bin:*)
+    *:${HOME}/.juliaup/bin:*)
         ;;
 
     *)
-        export PATH=/home/hnut/.juliaup/bin${PATH:+:${PATH}}
+        export PATH=${HOME}/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
 
 # <<< juliaup initialize <<<
 
 # uv
-export PATH="/home/hnut/.local/bin:$PATH"
+export PATH="/${HOME}/.local/bin:$PATH"
