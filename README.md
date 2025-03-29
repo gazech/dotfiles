@@ -2,8 +2,11 @@
 
 
 ## Set Environment
+
+Optional; will be sourced by the other scripts if `DOTFILE_BACKUP_EXTENSION` or `DOTFILE_DST_DIR` do not exist in the current shell environment.
+
 ```bash
-. ./dfinit.sh # required for every new shell!
+. ./.dfinit.sh # required for every new shell!
 ```
 
 ## Installation
