@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+export DOTFILE_DST_DIR=`readlink -e ~`
+export DOTFILE_BACKUP_EXTENSION=".bak"
+export _INDENT="    "
+echo "DOTFILE_DST_DIR=${DOTFILE_DST_DIR}"
+echo "DOTFILE_BACKUP_EXTENSION=${DOTFILE_BACKUP_EXTENSION}"
