@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
 if [[ -z ${DOTFILE_BACKUP_EXTENSION} ]] || [[ -z ${DOTFILE_DST_DIR} ]] || [[ -z ${_INDENT} ]]; then
-    echo -e "\033[0;31mdotfile env variables not found, run \`dfinit.sh\` first; exiting...\033[0m"
-    # Return for sourced scripts, exit for direct execution
-    [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 1 || exit 1
+    echo -e "\033[0;31mdotfile env variables not found, running \`./.dfinit.sh\` first...\033[0m"
+    source ./.dfinit.sh
 fi
 
 DOTFILE_DIRNAME="files"

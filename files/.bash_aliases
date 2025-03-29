@@ -18,3 +18,9 @@ alias df='df -h'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+# customize 'tree', if available
+if command -v tree 2>&1 >/dev/null
+then
+    alias tree="tree"
+fi

@@ -64,6 +64,11 @@ parse_git_branch() {
 # only display up to 3 parents directories
 export PROMPT_DIRTRIM=2
 
+# enable bash prompt annotation for git branches
+#source ~/.git-prompt.sh
+source /etc/bash_completion.d/git-prompt
+#export PROMPT_COMMAND="__git_ps1 "
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\033[2m$(__git_ps1)\033[0m $ '
 else
