@@ -28,6 +28,7 @@ fi
 
 # bash prompt w/ git settings (see .git-config.sh for details)
 # tl;dr - set these to a non-empty value to enable them
+GIT_PS1_SHOWCOLORHINTS="yes pls"
 GIT_PS1_SHOWDIRTYSTATE='y'
 GIT_PS1_SHOWSTASHSTATE='y'
 GIT_PS1_SHOWUNTRACKEDFILES='y'
