@@ -7,7 +7,7 @@
     added = green
     changed = cyan
     untracked = bold magenta
-    branch = yellow
+    branch = ul default
     remote = black reverse
     header = white    # Controls the status header colors
     localBranch = bold green    # Local branch in status
