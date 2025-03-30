@@ -322,7 +322,7 @@ __git_ps1_colorize_gitstring ()
 		local c_red="${c_pre}31${c_post}"
 		local c_green="${c_pre}32${c_post}"
 		local c_lblue="${c_pre}1;34${c_post}"
-		local c_clear="${c_pre}0${c_post}"
+		local c_clear="${c_pre}${c_post}"
 	fi
 	local bad_color="$c_red"
 	local ok_color="$c_green"

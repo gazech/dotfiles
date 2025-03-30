@@ -2,6 +2,24 @@
     lol = log --oneline --graph --decorate
 [init]
     defaultBranch = main
+
+[color.status]
+    added = green
+    changed = cyan
+    untracked = bold magenta
+    branch = yellow
+    remote = black reverse
+    header = white    # Controls the status header colors
+    localBranch = bold green    # Local branch in status
+    remoteBranch = italic yellow     # Remote branch in status
+    nobranch = reverse black
+
+[color.branch]
+    current = bold green
+    local = cyan
+    remote = italic yellow
+    upstream = blue
+    plain = white   
 [user]
-    email = gazecki.hunt@gmail.com
-    name = gazech
+	email = gazecki.hunt@gmail.com
+	name = gazech
