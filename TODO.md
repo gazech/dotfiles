@@ -5,3 +5,4 @@
 - [ ] --dry-run flag
 - [ ] cmd line arg for purging if env vars aren't set
     - interactive unlinking?
+- [ ] smarter path traversal for purger 
