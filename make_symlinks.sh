@@ -1,13 +1,13 @@
 #!/usr/bin/bash
 
-if [[ -z ${DOTFILE_BACKUP_EXTENSION} ]] || [[ -z ${DOTFILE_DST_DIR} ]] || [[ -z ${_INDENT} ]]; then
-    echo -e "\033[0;31mdotfile env variables not found, running \`./.dfinit.sh\` first...\033[0m"
-    source ./.dfinit.sh
-fi
-
 DOTFILE_DIRNAME="files"
 REPO_PATH=$(dirname $(readlink -e ${BASH_SOURCE[0]}))
 DOTFILE_PATH=${REPO_PATH}/${DOTFILE_DIRNAME}
+
+if [[ -z ${DOTFILE_BACKUP_EXTENSION} ]] || [[ -z ${DOTFILE_DST_DIR} ]] || [[ -z ${_INDENT} ]]; then
+    echo -e "\033[0;31mdotfile env variables not found, running \`${REPO_PATH}/.dfinit.sh\` first...\033[0m"
+    source ${REPO_PATH}/.dfinit.sh
+fi
 
 echo "Defaulting destination folder to ${DOTFILE_DST_DIR}"
 echo "Looking in ${DOTFILE_PATH} for dotfiles..."
