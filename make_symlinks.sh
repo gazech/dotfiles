@@ -40,4 +40,4 @@ for dot in `find ${DOTFILE_PATH} -type f`; do
 
 done
 
-echo -e "\033[42m >> Donezo (${ctr} dotfiles created) << \033[0m"
+echo -e "\033[7m >> Donezo (${ctr} dotfiles created) << \033[0m"

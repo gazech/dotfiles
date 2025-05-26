@@ -13,9 +13,10 @@ for dot in `find ${DOTFILE_PATH} -type f`; do
 
     DOT_NAME=`basename ${dot}`
     DOT_REL_NAME=`realpath ${dot} --relative-to=${DOTFILE_PATH}`
+    DOT_DEPTH=$((`echo ${DOT_REL_NAME} | grep -o / | wc -l` + 1))
 
-    echo -e "\033[1munlinking the following for ${DOT_REL_NAME}:\033[0m"
-    for lnk in `find ${DOTFILE_DST_DIR} -name "${DOT_NAME}*${DOTFILE_BACKUP_EXTENSION}*" -type l`; do
+    echo -e "\034[1munlinking the following for ${DOT_REL_NAME}:\033[0m"
+    for lnk in `find ${DOTFILE_DST_DIR} -name "${DOT_NAME}*${DOTFILE_BACKUP_EXTENSION}*" -type l` -maxdepth ${DOT_DEPTH} 2> /dev/null; do
         echo -e "    \033[2m${lnk}\033[0m"
         unlink ${lnk}
         ((ctr++))
@@ -24,4 +25,4 @@ for dot in `find ${DOTFILE_PATH} -type f`; do
 
 done
 
-echo -e "\033[42m >> Donezo (${ctr} dotfile backups deleted) << \033[0m"
+echo -e "\033[7m >> Donezo (${ctr} dotfile backups deleted) << \033[0m"
