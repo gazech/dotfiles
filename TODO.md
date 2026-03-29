@@ -5,4 +5,5 @@
 - [ ] --dry-run flag
 - [ ] cmd line arg for purging if env vars aren't set
     - interactive unlinking?
-- [ ] smarter path traversal for purger 
+- [ ] smarter path traversal for purger # still needed ??? 
+- [ ] dotfile "status" command for showing active links
