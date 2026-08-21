@@ -1,0 +1,7 @@
+{
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "dotfiles.repository": "https://github.com/eychgee/dotfiles.git",
+    "dotfiles.installCommand": "source .dfinit.sh && bash make_symlinks.sh && bash purge_backups.sh"
+}

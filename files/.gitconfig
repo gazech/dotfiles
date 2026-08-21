@@ -1,5 +1,6 @@
 [alias]
     lol = log --oneline --graph --decorate
+    fap = fetch --all --prune
 [init]
     defaultBranch = main
 
@@ -19,4 +20,4 @@
     local = cyan
     remote = italic yellow
     upstream = blue
-    plain = white   
+    plain = white

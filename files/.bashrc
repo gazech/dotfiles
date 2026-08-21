@@ -70,9 +70,9 @@ source ~/.git-prompt.sh
 if [ "$color_prompt" = yes ]; then
     # Define PS1 components for better readability
     _PS1_debian_chroot='${debian_chroot:+($debian_chroot)}'
-    _PS1_user='\[\033[01;32m\]\u\[\033[00m\]' # user
+    _PS1_user='\[\033[01;4;36m\]\u\[\033[00m\]' # user
     # _PS1_host='\[\033[02;32m\]@\h\[\033[00m\]' # host
-    _PS1_path=':\[\033[01;34m\]\w\[\033[00m\]' # path w.r.t. PROMPT_DIRTRIM
+    _PS1_path=':\[\033[01;35m\]\w\[\033[00m\]' # path w.r.t. PROMPT_DIRTRIM
     _PS1_git_branch='$(__git_ps1 " \[\033[2m\]{%s\[\033[00m\]\[\033[2m\]}")\[\033[00m\]' # the git color formatting will unset things, so we need to set them again
     _PS1_suffix=' $ '
 
@@ -148,3 +148,11 @@ esac
 
 # uv
 export PATH="/${HOME}/.local/bin:$PATH"
+
+# Artifactory API Key
+export ART_USER=hwgazecki
+export ART_API_TOK="hunter2"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

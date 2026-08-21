@@ -1,0 +1,30 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "enabled_providers": [
+        "litellm"
+    ],
+    "permission": {
+        "*": "ask"
+    },
+    "provider": {
+        "litellm": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "LiteLLM",
+            "options": {
+                "baseURL": "https://litellm-cui.rl.team/v1",
+                "apiKey": "sk-1Tkda-9c_xxvcU8czUs3JA"
+            },
+            "models": {
+                "anthropic.claude-sonnet-4-5-20250929-v1:0": {
+                    "name": "Claude Sonnet 4.5"
+                }
+            }
+        }
+    },
+    "share": "disabled",
+    "leader_timeout": 2000,
+    "cursor": "line",
+    "scroll_acceleration": {
+        "enabled": true
+    }
+}

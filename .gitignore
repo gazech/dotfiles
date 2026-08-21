@@ -1,0 +1,60 @@
+# Backup files created by make_symlinks.sh
+*.bak
+*.bak.*
+*.bak~*
+
+# Editor and IDE files
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Local machine-specific overrides
+*.local
+*.local.*
+.env
+.env.*
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Log files
+*.log
+
+# SSH keys and sensitive data (extra safety)
+*_rsa
+*_rsa.pub
+*_dsa
+*_dsa.pub
+*_ecdsa
+*_ecdsa.pub
+*_ed25519
+*_ed25519.pub
+*.pem
+*.key
+*.gpg
+
+# Shell history (in case accidentally copied)
+.bash_history
+.zsh_history
+.python_history
+
+# Testing and development
+test_output/
+.test/
