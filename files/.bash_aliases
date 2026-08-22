@@ -24,3 +24,6 @@ if command -v tree 2>&1 >/dev/null
 then
     alias tree="tree"
 fi
+
+# Python
+alias uvsa="uv sync --all-extras --all-groups --active" 

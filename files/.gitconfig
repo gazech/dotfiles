@@ -20,4 +20,7 @@
     local = cyan
     remote = italic yellow
     upstream = blue
-    plain = white
+    plain = white   
+[user]
+	email = gazecki.hunt@gmail.com
+	name = gazech
