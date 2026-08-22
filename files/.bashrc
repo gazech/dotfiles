@@ -72,12 +72,13 @@ if [ "$color_prompt" = yes ]; then
     _PS1_debian_chroot='${debian_chroot:+($debian_chroot)}'
     _PS1_user='\[\033[01;4;36m\]\u\[\033[00m\]' # user
     # _PS1_host='\[\033[02;32m\]@\h\[\033[00m\]' # host
-    _PS1_path=':\[\033[01;35m\]\w\[\033[00m\]' # path w.r.t. PROMPT_DIRTRIM
+    _PS1_path='\[\033[01;35m\]\w\[\033[00m\]' # path w.r.t. PROMPT_DIRTRIM
     _PS1_git_branch='$(__git_ps1 " \[\033[2m\]{%s\[\033[00m\]\[\033[2m\]}")\[\033[00m\]' # the git color formatting will unset things, so we need to set them again
     _PS1_suffix=' $ '
+    _PS1_delimiter='\[\033[02;5;37m\]::\[\033[00m\]'
 
     # Combine components into the final PS1
-    PS1="${_PS1_debian_chroot}${_PS1_user}${_PS1_path}${_PS1_git_branch}${_PS1_suffix}"
+    PS1="${_PS1_debian_chroot}${_PS1_user}${_PS1_delimiter}${_PS1_path}${_PS1_git_branch}${_PS1_suffix}"
 
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
